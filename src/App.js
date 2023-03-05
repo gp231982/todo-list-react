@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from "./Form";
+import AddNewTaskSection from "./AddNewTaskSection";
+import TasksSection from "./TasksSection";
+import AppHeader from "./AppHeader";
+
+const tasks = [
+  { id: 1, content: "Nakarmić rybki", done: false },
+  { id: 2, content: "Polecieć samolotem", done: true },
+];
+
+let toggleDoneSpanTextContent = "Ukryj ukończone";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="tasksListAppContainer">
+      <AppHeader />
+      <AddNewTaskSection form={<Form />} />
+      <TasksSection
+        tasks={tasks}
+        toggleDoneSpanTextContent={toggleDoneSpanTextContent}
+      />
     </div>
   );
 }

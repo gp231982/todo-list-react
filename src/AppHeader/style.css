@@ -1,0 +1,9 @@
+.tasksListAppHeader {
+  font-size: 32px;
+}
+
+@media (max-width: 300px) {
+  .tasksListAppHeader {
+    text-align: center;
+  }
+}

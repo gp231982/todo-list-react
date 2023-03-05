@@ -1,0 +1,13 @@
+.tasksSection__header {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .tasksSection__header {
+    padding-left: 0px;
+  }
+}
