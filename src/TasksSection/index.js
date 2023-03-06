@@ -2,13 +2,13 @@ import "./style.css";
 import Tasks from "../Tasks";
 import TasksSectionNav from "../TasksSectionNav";
 
-const TasksSection = (props) => (
+const TasksSection = ({ tasks, toggleDoneSpanTextContent }) => (
   <section className="tasksSection">
     <TasksSectionNav
-      tasks={props.tasks}
-      toggleDoneSpanTextContent={props.toggleDoneSpanTextContent}
+      tasks={tasks}
+      toggleDoneSpanTextContent={toggleDoneSpanTextContent}
     />
-    <Tasks tasks={props.tasks} />
+    <Tasks tasks={tasks} />
   </section>
 );
 

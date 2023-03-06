@@ -2,6 +2,7 @@ import Form from "./Form";
 import AddNewTaskSection from "./AddNewTaskSection";
 import TasksSection from "./TasksSection";
 import AppHeader from "./AppHeader";
+import Container from "./Container";
 
 const tasks = [
   { id: 1, content: "Nakarmić rybki", done: false },
@@ -12,14 +13,14 @@ let toggleDoneSpanTextContent = "Ukryj ukończone";
 
 function App() {
   return (
-    <div className="tasksListAppContainer">
+    <Container>
       <AppHeader />
       <AddNewTaskSection form={<Form />} />
       <TasksSection
         tasks={tasks}
         toggleDoneSpanTextContent={toggleDoneSpanTextContent}
       />
-    </div>
+    </Container>
   );
 }
 

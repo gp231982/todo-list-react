@@ -1,28 +1,30 @@
 .tasksSection__toggleDone {
-    font-size: 15px;
-    color: rgb(0, 153, 186);
-  }
-  
-  .tasksSection__toggleDone:hover {
-    cursor: pointer;
-    color: rgb(0, 153, 186, 0.8);
-  }
-  
-  .tasksSection__finishAll {
-    font-size: 15px;
-    color: rgb(0, 153, 186);
-  }
-  
-  .tasksSection__finishAll:hover {
-    cursor: pointer;
-    color: rgb(0, 153, 186, 0.8);
-  }
-  
-  .tasksSection__finishAll.notActive:hover {
-    cursor: auto;
-    color: #d4dbe3;
-  }
+  transition: 0.3s;
+  font-size: 15px;
+  color: rgb(0, 153, 186);
+}
 
-  .notActive {
-    color: #d4dbe3;
-  }
+.tasksSection__toggleDone:hover {
+  cursor: pointer;
+  color: rgb(0, 153, 186, 0.8);
+}
+
+.tasksSection__finishAll {
+  transition: 0.3s;
+  font-size: 15px;
+  color: rgb(0, 153, 186);
+}
+
+.tasksSection__finishAll:hover {
+  cursor: pointer;
+  color: rgb(0, 153, 186, 0.8);
+}
+
+.tasksSection__finishAll.notActive:hover {
+  cursor: auto;
+  color: #d4dbe3;
+}
+
+.notActive {
+  color: #d4dbe3;
+}

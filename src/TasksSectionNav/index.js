@@ -2,12 +2,12 @@ import "./style.css";
 import Buttons from "../Buttons";
 import TasksSectionNavHeader from "../TasksSectionNavHeader";
 
-const TasksSectionNav = (props) => (
+const TasksSectionNav = ({ tasks, toggleDoneSpanTextContent }) => (
   <nav className="tasksSection__navigation">
     <TasksSectionNavHeader />
     <Buttons
-      tasks={props.tasks}
-      toggleDoneSpanTextContent={props.toggleDoneSpanTextContent}
+      tasks={tasks}
+      toggleDoneSpanTextContent={toggleDoneSpanTextContent}
     />
   </nav>
 );

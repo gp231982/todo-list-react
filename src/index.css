@@ -1,13 +1,11 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 ::before,
 ::after {
   box-sizing: inherit;
 }
-
 body {
   background-color: #ededed;
   font-family: "roboto", sans-serif;
