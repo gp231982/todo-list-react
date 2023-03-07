@@ -5,7 +5,7 @@ import AppHeader from "./AppHeader";
 import Container from "./Container";
 
 const tasks = [
-  { id: 1, content: "Nakarmić rybki", done: false },
+  { id: 1, content: "Odbyć podróż dookoła świata", done: false },
   { id: 2, content: "Polecieć samolotem", done: true },
 ];
 
