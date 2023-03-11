@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Form from "./Form";
-// import Buttons from "./Buttons";
+import Buttons from "./Buttons";
 import Section from "./Section";
 import Tasks from "./Tasks";
-// import TasksSection from "./TasksSection";
 import AppHeader from "./AppHeader";
 import Container from "./Container";
 import TasksSectionNav from "./TasksSectionNav";
-// import TasksSectionNavHeader from "./TasksSectionNavHeader";
+import TasksSectionNavHeader from "./TasksSectionNavHeader";
 
 const tasks = [
   { id: 1, content: "Odbyć podróż dookoła świata", done: false },
@@ -34,11 +33,19 @@ function App() {
       <Section
         sectionClassName="tasksSection"
         extraHeaderContent={
-          <TasksSectionNav
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-          />
+          // <TasksSectionNav
+          //   tasks={tasks}
+          //   hideDone={hideDone}
+          //   toggleHideDone={toggleHideDone}
+          // />
+          <TasksSectionNav>
+            <TasksSectionNavHeader />
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+            />
+          </TasksSectionNav>
         }
         children={<Tasks tasks={tasks} />}
       />
