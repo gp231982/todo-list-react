@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import Form from "./Form";
-import AddNewTaskSection from "./AddNewTaskSection";
-import TasksSection from "./TasksSection";
+// import Buttons from "./Buttons";
+import Section from "./Section";
+import Tasks from "./Tasks";
+// import TasksSection from "./TasksSection";
 import AppHeader from "./AppHeader";
 import Container from "./Container";
+import TasksSectionNav from "./TasksSectionNav";
+// import TasksSectionNavHeader from "./TasksSectionNavHeader";
 
 const tasks = [
   { id: 1, content: "Odbyć podróż dookoła świata", done: false },
   { id: 2, content: "Polecieć samolotem", done: true },
 ];
-
-let toggleDoneSpanTextContent = "Ukryj ukończone";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -22,12 +24,23 @@ function App() {
   return (
     <Container>
       <AppHeader />
-      <AddNewTaskSection form={<Form />} />
-      <TasksSection
-        tasks={tasks}
-        toggleDoneSpanTextContent={toggleDoneSpanTextContent}
-        toggleHideDone={toggleHideDone}
-        hideDone={hideDone}
+      <Section
+        sectionClassName="addTaskSection"
+        headerClassName="addTaskSection__header"
+        title="Dodaj nowe zadanie"
+        extraHeaderContent={null}
+        children={<Form />}
+      />
+      <Section
+        sectionClassName="tasksSection"
+        extraHeaderContent={
+          <TasksSectionNav
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+          />
+        }
+        children={<Tasks tasks={tasks} />}
       />
     </Container>
   );

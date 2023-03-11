@@ -1,10 +1,6 @@
 import "./style.css";
 
-const Buttons = ({
-  tasks,
-  hideDone,
-  toggleHideDone,
-}) =>
+const Buttons = ({ tasks, hideDone, toggleHideDone }) =>
   tasks.length > 0 && (
     <>
       <span onClick={toggleHideDone} className="tasksSection__toggleDone">

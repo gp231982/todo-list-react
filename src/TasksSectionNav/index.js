@@ -4,9 +4,9 @@ import TasksSectionNavHeader from "../TasksSectionNavHeader";
 
 const TasksSectionNav = ({
   tasks,
-  toggleDoneSpanTextContent,
   hideDone,
   toggleHideDone,
+  children,
 }) => (
   <nav className="tasksSection__navigation">
     <TasksSectionNavHeader />
@@ -14,7 +14,6 @@ const TasksSectionNav = ({
       tasks={tasks}
       hideDone={hideDone}
       toggleHideDone={toggleHideDone}
-      toggleDoneSpanTextContent={toggleDoneSpanTextContent}
     />
   </nav>
 );

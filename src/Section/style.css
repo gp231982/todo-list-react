@@ -1,0 +1,67 @@
+.addTaskSection {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.addTaskSection__header {
+  font-size: 20px;
+  padding-left: 20px;
+  height: 80px;
+  border-bottom: 1px solid #dddada;
+  margin-bottom: 0;
+  line-height: 80px;
+}
+
+@media (max-width: 300px) {
+  .addTaskSection__header {
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/*----------------------------------------------------------------------*/
+
+.tasksSection {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.tasksSection__header {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+}
+
+.tasksSection__navigation {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  border-bottom: 1px solid #dddada;
+}
+
+@media (max-width: 500px) {
+  .tasksSection__navigation {
+    grid-template-columns: 1fr;
+    padding-right: 0px;
+    padding-left: 0px;
+    gap: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .tasksSection__header {
+    padding-left: 0px;
+  }
+}
