@@ -33,11 +33,6 @@ function App() {
       <Section
         sectionClassName="tasksSection"
         extraHeaderContent={
-          // <TasksSectionNav
-          //   tasks={tasks}
-          //   hideDone={hideDone}
-          //   toggleHideDone={toggleHideDone}
-          // />
           <TasksSectionNav>
             <TasksSectionNavHeader />
             <Buttons
