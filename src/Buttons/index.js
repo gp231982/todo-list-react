@@ -1,10 +1,14 @@
 import "./style.css";
 
-const Buttons = ({ tasks, toggleDoneSpanTextContent }) =>
+const Buttons = ({
+  tasks,
+  hideDone,
+  toggleHideDone,
+}) =>
   tasks.length > 0 && (
     <>
-      <span className="tasksSection__toggleDone">
-        {toggleDoneSpanTextContent}
+      <span onClick={toggleHideDone} className="tasksSection__toggleDone">
+        {hideDone ? "Pokaż" : "Ukryj"} ukończone
       </span>
       <span
         className={`tasksSection__finishAll ${

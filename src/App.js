@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Form from "./Form";
 import AddNewTaskSection from "./AddNewTaskSection";
 import TasksSection from "./TasksSection";
@@ -12,6 +13,12 @@ const tasks = [
 let toggleDoneSpanTextContent = "Ukryj ukończone";
 
 function App() {
+  const [hideDone, setHideDone] = useState(false);
+
+  const toggleHideDone = () => {
+    setHideDone((hideDone) => !hideDone);
+  };
+
   return (
     <Container>
       <AppHeader />
@@ -19,6 +26,8 @@ function App() {
       <TasksSection
         tasks={tasks}
         toggleDoneSpanTextContent={toggleDoneSpanTextContent}
+        toggleHideDone={toggleHideDone}
+        hideDone={hideDone}
       />
     </Container>
   );

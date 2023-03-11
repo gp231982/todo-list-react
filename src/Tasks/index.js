@@ -2,7 +2,7 @@ import "./style.css";
 
 const checkIcon = <i className="fa-solid fa-check"></i>;
 
-const Tasks = ({tasks}) => {
+const Tasks = ({ tasks }) => {
   return (
     <ul className="tasksSection__tasksList">
       {tasks.map((task) => (

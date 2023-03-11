@@ -1,9 +1,9 @@
 import "./style.css";
 
-const AddNewTaskSection = (props) => (
+const AddNewTaskSection = ({form}) => (
   <section className="addTaskSection">
     <h2 className="addTaskSection__header">Dodaj nowe zadanie</h2>
-    {props.form}
+    {form}
   </section>
 );
 
