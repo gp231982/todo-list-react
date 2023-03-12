@@ -1,26 +1,31 @@
-.tasksSection__toggleDone {
+.buttons {
+  background-color: transparent;
+  border: none;
+}
+
+.buttons__toggleDone {
   transition: 0.3s;
   font-size: 15px;
   color: rgb(0, 153, 186);
 }
 
-.tasksSection__toggleDone:hover {
+.buttons__toggleDone:hover {
   cursor: pointer;
   color: rgb(0, 153, 186, 0.8);
 }
 
-.tasksSection__finishAll {
+.buttons__finishAll {
   transition: 0.3s;
   font-size: 15px;
   color: rgb(0, 153, 186);
 }
 
-.tasksSection__finishAll:hover {
+.buttons__finishAll:hover {
   cursor: pointer;
   color: rgb(0, 153, 186, 0.8);
 }
 
-.tasksSection__finishAll.notActive:hover {
+.buttons__finishAll.notActive:hover {
   cursor: auto;
   color: #d4dbe3;
 }
