@@ -42,7 +42,7 @@ function App() {
             />
           </TasksSectionNav>
         }
-        children={<Tasks tasks={tasks} />}
+        children={<Tasks hideDone={hideDone} tasks={tasks} />}
       />
     </Container>
   );

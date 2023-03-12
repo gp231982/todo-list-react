@@ -1,10 +1,18 @@
 import "./style.css";
 
-const Tasks = ({ tasks }) => (
+const Tasks = ({ tasks, hideDone }) => (
   <ul className="tasks">
     {tasks.map((task) => (
-      <li className="tasks__listItem" key={task.id}>
-        <button className="tasks__button tasks__button--toggleDone">
+      <li
+        className={`tasks__listItem ${hideDone && task.done ? "hidden" : null}`}
+        key={task.id}
+      >
+        <button
+          onClick={() => {
+            console.log("działa");
+          }}
+          className="tasks__button tasks__button--toggleDone"
+        >
           {task.done ? <i className="fa-solid fa-check"></i> : null}
         </button>
         <span
