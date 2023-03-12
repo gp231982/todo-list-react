@@ -1,11 +1,11 @@
-.tasksSection__tasksList {
+.tasks {
   margin-block-start: 0;
   padding: 0;
   padding-right: 40px;
   padding-left: 40px;
 }
 
-.tasksListItem {
+.tasks__listItem {
   border-bottom: 1px solid #dddada;
   display: flex;
   justify-content: flex-start;
@@ -15,54 +15,52 @@
   padding-top: 20px;
 }
 
-.tasksListItem__contentSpan {
+.tasks__content {
   padding: 30px;
   font-size: 16px;
   word-break: break-word;
   flex-grow: 1;
 }
 
-.tasksListItem__contentSpan--done {
+.tasks__content--done {
   text-decoration: line-through;
 }
 
-.tasksListItem__checkButton {
+.tasks__button {
   min-width: 40px;
   height: 40px;
-  background-color: rgb(25, 122, 35);
   transition: 0.3s;
   color: white;
   border: none;
 }
 
-.tasksListItem__checkButton:hover {
+.tasks__button--toggleDone {
+  background-color: rgb(25, 122, 35);
+}
+
+.tasks__button--toggleDone:hover {
   cursor: pointer;
   background-color: rgb(25, 122, 35, 0.85);
 }
 
-.tasksListItem__removeButton {
-  min-width: 40px;
-  height: 40px;
+.tasks__button--remove {
   background-color: rgb(237, 41, 60);
-  transition: 0.3s;
-  color: white;
-  border: none;
 }
 
-.tasksListItem__removeButton:hover {
+.tasks__button--remove:hover {
   cursor: pointer;
   background-color: rgb(237, 41, 60, 0.85);
 }
 
 @media (max-width: 500px) {
-  .tasksListItem {
+  .tasks__listItem {
     justify-content: space-evenly;
     text-align: center;
   }
 }
 
 @media (max-width: 500px) {
-  .tasksListItem__removeButton {
+  .tasks__button--remove {
     margin-left: unset;
   }
 }

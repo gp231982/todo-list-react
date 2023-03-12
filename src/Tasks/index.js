@@ -1,28 +1,24 @@
 import "./style.css";
 
-const checkIcon = <i className="fa-solid fa-check"></i>;
-
-const Tasks = ({ tasks }) => {
-  return (
-    <ul className="tasksSection__tasksList">
-      {tasks.map((task) => (
-        <li className="tasksListItem" key={task.id}>
-          <button className="tasksListItem__checkButton">
-            {task.done ? checkIcon : ""}
-          </button>
-          <span
-            className={`${task.done ? "tasksListItem__contentSpan--done" : ""}
-            tasksListItem__contentSpan`}
-          >
-            {task.content}
-          </span>
-          <button className="tasksListItem__removeButton">
-            <i className="fa-regular fa-trash-can"></i>
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
-};
+const Tasks = ({ tasks }) => (
+  <ul className="tasks">
+    {tasks.map((task) => (
+      <li className="tasks__listItem" key={task.id}>
+        <button className="tasks__button tasks__button--toggleDone">
+          {task.done ? <i className="fa-solid fa-check"></i> : null}
+        </button>
+        <span
+          className={`${task.done ? "tasks__content--done" : null}
+            tasks__content`}
+        >
+          {task.content}
+        </span>
+        <button className="tasks__button tasks__button--remove">
+          <i className="fa-regular fa-trash-can"></i>
+        </button>
+      </li>
+    ))}
+  </ul>
+);
 
 export default Tasks;

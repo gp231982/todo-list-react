@@ -1,7 +1,5 @@
 import "./style.css";
 
-const Container = ({ children }) => (
-  <div className="tasksListAppContainer">{children}</div>
-);
+const Container = ({ children }) => <div className="container">{children}</div>;
 
 export default Container;
