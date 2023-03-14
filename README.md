@@ -10,8 +10,7 @@ https://gp231982.github.io/todo-list-react/
 
 ## Demo
 
-![tasksList-react](https://user-images.githubusercontent.com/68773588/223484251-a1dc7dbd-350f-41e7-8835-0294bc61df93.png)
-
+https://user-images.githubusercontent.com/68773588/224906483-3d0b79b1-0259-405f-861d-8c234b262fac.mp4
 
 ## Technologies and conventions
 
