@@ -29,10 +29,31 @@ function App() {
         if (task.id === id) {
           return { ...task, done: !task.done };
         }
-
         return task;
       })
     );
+  };
+
+  const removeTask = (id) => {
+    setTasks((tasks) =>
+      tasks.filter((task) => {
+        if (task.id !== id) {
+          return { ...task };
+        }
+        return null;
+      })
+    );
+  };
+
+  const addNewTask = (newTaskContent) => {
+    setTasks([
+      ...tasks,
+      {
+        content: newTaskContent,
+        done: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      },
+    ]);
   };
 
   return (
@@ -43,7 +64,7 @@ function App() {
         headerClassName="addTaskSection__header"
         title="Dodaj nowe zadanie"
         extraHeaderContent={null}
-        children={<Form />}
+        children={<Form addNewTask={addNewTask} />}
       />
       <Section
         sectionClassName="tasksSection"
@@ -61,6 +82,7 @@ function App() {
         children={
           <Tasks
             toggleTaskDone={toggleTaskDone}
+            removeTask={removeTask}
             hideDone={hideDone}
             tasks={tasks}
           />
