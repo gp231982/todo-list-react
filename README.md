@@ -2,9 +2,7 @@
 
 ## Description
 
-This is a simple react taskList application created with create-react-app package (refactored from tasksList repository made in vanila js). So far this react app is created without any user interactions which is planned to be added later.
-
-## Link
+This is a simple react taskList application with interactions (adding new tasks, removing them, marking particular task done or not, marking all tasks done, hiding done tasks and showing them) created with create-react-app package (refactored from tasksList repository made in vanila js).
 
 https://gp231982.github.io/todo-list-react/
 
