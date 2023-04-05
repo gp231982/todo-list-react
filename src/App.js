@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Section from "./Section";
@@ -8,12 +8,24 @@ import Container from "./Container";
 import TasksSectionNav from "./TasksSectionNav";
 import TasksSectionNavHeader from "./TasksSectionNavHeader";
 
+const getInitialTasks = () => {
+  const tasksFromLocalStorage = localStorage.getItem("tasksData");
+  return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : [
+        { id: 1, content: "Odbyć podróż dookoła świata", done: false },
+        { id: 2, content: "Polecieć samolotem", done: true },
+      ];
+};
+
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Odbyć podróż dookoła świata", done: false },
-    { id: 2, content: "Polecieć samolotem", done: true },
-  ]);
+
+  const [tasks, setTasks] = useState(getInitialTasks);
+
+  useEffect(() => {
+    localStorage.setItem("tasksData", JSON.stringify(tasks));
+  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
